@@ -1,0 +1,52 @@
+// Base
+$base--line-height: 1.15;
+
+// Navbar
+$navbar--height: 80px;
+
+// Content
+$content--padding: 15px; 
+$content--background-color: #f1f4f5;
+$content--card-header-height: 60px;
+$content--tabs-header-height: 38px;
+// Content, 填充整屏高度(非tabs状态) = 整屏高度 - 导航条高度 - aui-content上下内边距高度
+$content--fill-height: calc(100vh - #{$navbar--height} - #{$content--padding * 2});
+// Content, 填充整屏高度(是tabs状态) = 整屏高度 - 导航条高度 - tabs组件header高度 - tabs组件content上下内边距高度
+$content--fill-height-tabs: calc(100vh - #{$navbar--height} - #{$content--tabs-header-height} - #{$content--padding * 2});
+
+/* smp common
+------------------------------ */
+$smp--color-warn-lv-1: #fb7c26;
+$smp--color-warn-lv-2: #ffbf11;
+$smp--color-warn-lv-3: #11bbec;
+$smp--color-warn-lv-4: #1882f8;
+$smp--color-blue: #1280f1;
+$smp--color-blue-white: #e2f0fd;
+$smp--color-blue-white-2: #f1f8ff;
+$smp--color-red: #f95757;
+$smp--color-white: #ffffff;
+$smp--color-gray_f5: #f5f5f5;
+$smp--color-gray_ef: #efefef;
+$smp--color-gray_e7: #e7e7e7;
+$smp--color-gray_dd: #dddddd;
+$smp--color-font-color-6: #666;
+$smp--color-font-color-3: #333;
+$smp--box-shadow: 0 0 5px rgba(0,0,0,0.3);
+$smp--box-shadow-1: 0 0 5px rgba(0,0,0,0.1);
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  // baseLineHeight: $base--line-height;
+  navbarHeight: $navbar--height;
+  contentPadding: $content--padding;
+  contentBackgroundColor: $content--background-color;
+  contentCardHeaderHeight: $content--card-header-height;
+  contentTabsHeaderHeight: $content--tabs-header-height;
+  contentFillHeight: $content--fill-height;
+  contentFillHeightTabs: $content--fill-height-tabs;
+  // COMMON
+  smpColorBlue: $smp--color-blue;
+  smpColorBlueWhite: $smp--color-blue-white;
+  smpColorBlueWhite2: $smp--color-blue-white-2;
+}

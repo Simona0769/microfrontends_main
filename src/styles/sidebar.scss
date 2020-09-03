@@ -1,0 +1,29 @@
+@import './variables.scss';
+#sgpt-app {
+
+  .sgpt-main-container {
+    height: 100%;
+    transition: margin-left .28s;
+    position: relative;
+  }
+
+  .sgpt-navbar {
+      background-color: $smp--color-blue;
+      height: $navbar--height;
+      width:100%;
+      display: flex;
+      box-shadow: $smp--box-shadow-1;
+      .navbar-hd{
+        width:259px;
+        flex-shrink: 0;
+        h1{
+          margin:0;
+        }
+      }
+      .navbar-bd{
+        flex:1;
+        display: flex;
+      }
+    }
+}
+
